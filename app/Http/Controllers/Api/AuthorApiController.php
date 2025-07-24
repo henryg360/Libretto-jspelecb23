@@ -26,7 +26,6 @@ class AuthorApiController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'bio' => 'nullable|string',
             // Add more validation rules as per your schema
         ]);
 
@@ -53,7 +52,6 @@ class AuthorApiController extends Controller
     {
         $validated = $request->validate([
             'name' => 'sometimes|required|string|max:255',
-            'bio' => 'nullable|string',
             // Add more rules as needed
         ]);
 
